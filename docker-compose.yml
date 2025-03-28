@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  flowise:
+    image: flowiseai/flowise
+    container_name: flowise
+    ports:
+      - "3000:3000"
+    volumes:
+      - flowise_data:/root/.flowise
+    restart: always
+
+volumes:
+  flowise_data:
